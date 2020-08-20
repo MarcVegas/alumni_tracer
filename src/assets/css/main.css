@@ -1,0 +1,19 @@
+@import 'shared/variables.css';
+@import 'shared/fonts.css';
+@import 'shared/navbar.css';
+@import 'shared/forms.css';
+
+body {
+    background-color: #edf2f6;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p,a {
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--font-base-color);
+}
+
+label, input {
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--font-base-color);
+}

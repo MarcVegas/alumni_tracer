@@ -1,0 +1,14 @@
+nav div a {
+    font-weight: bold;
+    padding: 1.6rem 1rem;
+}
+
+nav div a:hover {
+    color: #4a5568;
+}
+
+nav div a:focus {
+    border-bottom-width: 4px;
+    border-color: #4299e1;
+    transition: 200ms ease-in-out;
+}
