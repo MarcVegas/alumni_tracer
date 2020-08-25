@@ -4,6 +4,8 @@ import News from '../views/News.vue'
 import About from '../views/About.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
+import Dashboard from '../views/Dashboard.vue'
+import Forum from '../views/Forum.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +29,16 @@ Vue.use(VueRouter)
     path: '/register',
     name: 'Register',
     component: Register
+  },
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    component: Dashboard
+  },
+  {
+    path: '/forum',
+    name: 'Forum',
+    component: Forum
   },
 ]
 

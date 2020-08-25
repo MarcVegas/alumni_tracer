@@ -6,6 +6,10 @@
               <form action="">
                   <input type="text" class="search" placeholder="Search name, course, or alumni ID">
               </form>
+              <div>
+                  <p>Please remember to check your email for your account credentials. If you do not see it after
+                  </p>
+              </div>
           </div>
       </div>
   </div>

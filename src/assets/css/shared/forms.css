@@ -46,3 +46,33 @@
     background-color: #63b3ed;
     transition: 200ms ease-in;
 }
+
+.item {
+    font-weight: bold;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: .50rem;
+    text-align: left;
+}
+
+.item:hover {
+    background-color: rgba(237, 242, 246, 0.24);
+    transition: 150ms ease-in-out;
+}
+
+.item:focus {
+    outline: none;
+    background-color: rgba(160, 71, 233, 0.30);
+}
+
+.icon-button {
+    background-color: #e2e8f0;
+    padding: .6rem;
+    border-radius: .5rem;
+    margin: .3rem;
+}
+
+.icon-button:hover svg {
+    color: white;
+    transition: 300ms ease-in-out;
+}

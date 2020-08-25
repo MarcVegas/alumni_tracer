@@ -14,7 +14,7 @@
                 </div><br><br>
                 <div class="flex flex-col lg:flex-row items-center">
                     <button type="submit" class="button bg-blue-500 w-1/2">Sign In</button>
-                    <a class="font-bold text-blue-400 ml-2 w-1/2" href="">Forgot your password?</a>
+                    <router-link class="font-bold text-blue-400 ml-2 w-1/2" to="/dashboard">Forgot your password?</router-link>
                 </div>
               </form>
               <div>
