@@ -5,6 +5,11 @@
           <div class="w-1/5 p-4">
               <div class="bg-gray-900 rounded-lg w-full h-full p-6">
                   <div class="flex flex-col text-white">
+                      <div class="text-center">
+                          <img class="w-16 h-16 mx-auto" src="../assets/wlclogo.png" alt="">
+                          <h3 class="font-bold text-lg text-gray-200">Signed in as</h3>
+                          <p class="text-gray-200">Director</p>
+                      </div>
                       <button class="mt-3 item" v-on:click="panel = 1">
                           <svg viewBox="0 0 20 20" fill="currentColor" class="chart-bar w-6 h-6 inline-block text-teal-700"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path></svg>
                           <span class="pl-2">Analytics</span>
@@ -27,11 +32,11 @@
                                 Users</button>
                         </div>
                       </transition>
-                      <button v-on:click="panel = 4" class="mt-2 item">
+                      <button v-on:click="panel = 5" class="mt-2 item">
                           <svg viewBox="0 0 20 20" fill="currentColor" class="speakerphone w-6 h-6 inline-block text-pink-700"><path fill-rule="evenodd" d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z" clip-rule="evenodd"></path></svg>
                           <span class="pl-2">Announcement</span>
                       </button>
-                      <button class="mt-2 item">
+                      <button v-on:click="panel = 6" class="mt-2 item">
                           <svg viewBox="0 0 20 20" fill="currentColor" class="user-group w-6 h-6 inline-block text-orange-700"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path></svg>
                           <span class="pl-2">Requests</span>
                       </button>
@@ -41,7 +46,10 @@
           <div class="w-4/5 p-4">
                 <transition name="fadeRight" leave-active-class="fadeUp">
                     <PanelAnalytics v-if="panel == 1" />
-                    <PanelDepartment  v--else-if="panel == 2" />
+                    <PanelDepartment  v-else-if="panel == 2" />
+                    <PanelNews  v-else-if="panel == 3" />
+                    <PanelUsers  v-else-if="panel == 4" />
+                    <PanelAnnounce  v-else-if="panel == 5" />
                 </transition>
             </div>
       </div>
@@ -52,13 +60,19 @@
 import DashNav from '../components/layouts/DashNav'
 import PanelAnalytics from '../components/layouts/PanelAnalytics'
 import PanelDepartment from '../components/layouts/PanelDepartment'
+import PanelNews from '../components/layouts/PanelNews'
+import PanelUsers from '../components/layouts/PanelUsers'
+import PanelAnnounce from '../components/layouts/PanelAnnounce'
 
 export default {
     name: 'Dashboard',
     components: {
         DashNav,
         PanelAnalytics,
-        PanelDepartment
+        PanelDepartment,
+        PanelNews,
+        PanelUsers,
+        PanelAnnounce
     },
     data() {
         return {
